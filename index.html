@@ -19,13 +19,17 @@
         }
        
         .command {
-            position: relative;
-            white-space: nowrap;
+			position: relative;
+			white-space: nowrap;
+			border: 1px solid;
+			margin: 5px;	
         }
        
         .command__title {
-            margin: 25px 0;
+			margin: 10px 0;
             color: rgb(6 59 61);
+			background-color: silver;
+			padding: 2px;
         }
        
         .command__description {
@@ -33,6 +37,7 @@
             white-space: pre-line;
 			font-size: 20px;
             color: rgb(60 179 113);
+			padding: 5px;
         }
        
         .command__example {
@@ -44,47 +49,55 @@
 </head>
  <center>
 <body class="container">
-    <main class="main_content">
- 
+    <main class="main_content"> 
+		
         <h1 class="text-center">Grupa CE</h1>
-        <section class="command">
+		<ul>
+		<li><a href="#1">git config --global user.email ""</a></li>
+		<li><a href="#2">git diff --staged</a></li>
+		<li><a href="#3">git checkout -b "branch"</a></li>
+		<li><a href="#4">git log --graph --all</a></li>
+		<li><a href="#5">git branch -d "branch"</a></li>
+		<li><a href="#6">git fetch "remote" "branch"</a></li>
+		</ul>
+        <section class="command" id="1">
             <h2 class="command__title">Komenda: git config --global user.email "user_name"</h2>
             <p class="command__description">
-                Opisz: Ustawia globalnie email użytkownika.</p>
+                Opis: Ustawia globalnie email użytkownika.</p>
             <p class="command__example">Przykład użycia: git config --global user.email "user@st.amu.edu.pl"</p>
         </section>
-        <section class="command">
+        <section class="command" id="2">
             <h2 class="command__title">Komenda: git diff --staged</h2>
             <p class="command__description">
-                Opisz: Pokazuje co zostało zmienione w obserwowanych plikach.
+                Opis: Pokazuje co zostało zmienione w obserwowanych plikach.
             </p>
             <p class="command__example">Przykład użycia: git diff --staged</p>
         </section>
-        <section class="command">
+        <section class="command" id="3">
             <h2 class="command__title">Komenda: git checkout -b "branch"</h2>
             <p class="command__description">
-                Opisz: Przechodzi na gałąź o nazwie branch, jeśli taka nie istnieje to tworzy nową.
+                Opis: Przechodzi na gałąź o nazwie branch, jeśli taka nie istnieje to tworzy nową.
             </p>
             <p class="command__example">Przykład użycia: git checkout -b "user_branch"</p>
         </section>
-        <section class="command">
+        <section class="command" id="4">
             <h2 class="command__title">Komenda: git log --graph --all</h2>
             <p class="command__description">
-                Opisz: Wypisuje listę poprzednich commitów. Opcja graph dodaje graficzny podgląd gałęzi. Opcja all pokazuje też inne gałęzie.
+                Opis: Wypisuje listę poprzednich commitów. Opcja graph dodaje graficzny podgląd gałęzi. Opcja all pokazuje też inne gałęzie.
             </p>
             <p class="command__example">Przykład użycia: git log --graph --all</p>
         </section>
-        <section class="command">
+        <section class="command" id="5">
             <h2 class="command__title">Komenda: git branch -d "branch"</h2>
             <p class="command__description">
-                Opisz: Usuwa gałąź o nazwie branch.
+                Opis: Usuwa gałąź o nazwie branch.
             </p>
             <p class="command__example">Przykład użycia: git branch -d "user_branch"</p>
         </section>
-        <section class="command">
+        <section class="command" id="6">
             <h2 class="command__title">Komenda: git fetch "remote" "branch"</h2>
             <p class="command__description">
-                Opisz: Pobiera wszystkie zmiany z remote'a o nazwie remote z gałęzi branch.
+                Opis: Pobiera wszystkie zmiany z remote'a o nazwie remote z gałęzi branch.
             </p>
             <p class="command__example">Przykład użycia: git fetch "remote" "user_branch"</p>
         </section>
