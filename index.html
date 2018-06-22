@@ -245,6 +245,7 @@ git -C blame - pozwala sprawdzic, kto jest autorem danej linii kodu, 'obwinic tw
 				Color.iu ustawione na "true" włącza kolorowanie wyników dzałania rodzin komend git w konsolach które to wspierają. Jeśli output jest przekierowany do pliku, to nie zostaną dodane sekwencje ANSI mówiące o kolorze.</br>
 				Inne możliwe ustawienia Color.io to "false" i "always".
 				Git domyślnie koloruje składnie. Przełącznik true włącza ten feature, false wyłącza.
+				Szczegółowy opis można znaleźć po wpisaniu komendy: git help config
 			</p>
             <p class="command__example">Przykład użycia: git config --global color.ui true</p>
         </section>
@@ -254,14 +255,14 @@ git -C blame - pozwala sprawdzic, kto jest autorem danej linii kodu, 'obwinic tw
             <p class="command__description">
                 Opis: Commituje zmianę tylko pliku o nazwie "filename", zachowując w staging wcześniej dodane pliki za pomocą 'git add'.</br>
 				przykład: git commit "index.html". Po wykonaniu takiej komendy zostanie przesłany tylko plik index.html.
-				Uruchomi się edytor tekstu w celu utworzenia opisu zmian. Komentarz można również utworzyć w terminalu przy pomocy atrubuty -m (git commit "index.html" -m "tresc opisu zmian") co przy niewielkich wiadomościach przyspierza proces comitowania.
+				Uruchomi się edytor tekstu w celu utworzenia opisu zmian. Komentarz można również utworzyć w terminalu przy pomocy atrubuty -m (git commit "index.html" -m "tresc opisu zmian") co przy niewielkich wiadomościach przyspiesza proces commit'owania.
 				Commituje zmianę tylko pliku o nazwie "filename", zachowując w staging wcześniej dodane pliki za pomocą 'git add'. Szczególnie przydatne gdy dokonaliśmy zmian w wielu plikach projektu, a commitować chcemy tylko jeden.
 			</p>
             <p class="command__example">Przykład użycia: git commit "README.md"</p>
         </section>
 		
 		<section class="command">
-            <h2 class="command__title">git branch "name"</h2>
+            <h2 class="command__title">Komenda: git branch "name"</h2>
             <p class="command__description">
                 Opis: Tworzy nową gałąź o nazwie "name", ale do niej nie przechodzi, trzeba to zrobić ręcznie za pomocą 'git checkout "name"'.
 			</p>
@@ -269,17 +270,17 @@ git -C blame - pozwala sprawdzic, kto jest autorem danej linii kodu, 'obwinic tw
         </section>
 		
 		<section class="command">
-            <h2 class="command__title">git branch -v</h2>
+            <h2 class="command__title">Komenda: git branch -v</h2>
             <p class="command__description">
-                Opis: W trybie listy wyświetla skrót sha1 i temat commita w jednej linii dla każdej sekcji head, ze statusem względem nielokalnej gałęzi.
+                Opis: W trybie listy wyświetla nazwę gałęzi, skrót sha1 i opis ostatnio zatwierdzonego zestawu zmian(commita).
 			</p>
             <p class="command__example">Przykład użycia: git branch -v</p>
         </section>
 		
 		<section class="command">
-            <h2 class="command__title">git push "remote" "branch"</h2>
+            <h2 class="command__title">Komenda: git push "remote" "branch"</h2>
             <p class="command__description">
-                Opis: Synchronizacja z serwerem zdalnym "remote" gałęzi "branch". Inaczej wypycha gałąź branch na server remote.
+                Opis: Synchronizacja z serwerem zdalnym "remote" gałęzi "branch". Inaczej wypycha gałąź branch na serwer zdalny (remote).
 				Ogólna postać komendy: git push [nazwa zdalnego repozytorium] [nazwa gałęzi]
 				Przydatna gdy chcemy udostępnić dokonane przez nas zmiany członkom zespołu, którzy pracują przy tym samym projekcie.
 			</p>
@@ -287,7 +288,7 @@ git -C blame - pozwala sprawdzic, kto jest autorem danej linii kodu, 'obwinic tw
         </section>
 		
 		<section class="command">
-            <h2 class="command__title">git log "branch" --not "branch"</h2>
+            <h2 class="command__title">Komenda: git log "branch" --not "branch"</h2>
             <p class="command__description">
                 Opis: Słuzy do wyświetlenia listy commitów z gałęzi „branch” z wyjątkiem w postaci gałęzi „branch”.
 				W praktyce, nie wyświetla nic, gdyż ma wyświetlić listę commitów z gałęzi "branch" ale z wyjątkiem gałęzi o nazwie "branch", więc w sumie żadna gałąź nie jest podana jako argument. 
@@ -297,7 +298,7 @@ git -C blame - pozwala sprawdzic, kto jest autorem danej linii kodu, 'obwinic tw
         </section>
 		
 		<section class="command">
-            <h2 class="command__title">git blame -C "filename"</h2>
+            <h2 class="command__title">Komenda: git blame -C "filename"</h2>
             <p class="command__description">
                 Opis: Rozpoznaje linie w pliku "filename" skopiowane z innych plików, które były zmodyfikowane w ramach jednego commita. Przydatne przy reorganizacji struktury programu.
 			</p>
@@ -305,7 +306,7 @@ git -C blame - pozwala sprawdzic, kto jest autorem danej linii kodu, 'obwinic tw
         </section>
 		
 		<section class="command">
-            <h2 class="command__title">git bisect (start, bad, good, reset)</h2>
+            <h2 class="command__title">Komenda: git bisect (start, bad, good, reset)</h2>
             <p class="command__description">
                 Opis: Służy do wyszukiwania bugów w kodzie na podstawie commitów, złego (bad - obecnego lub innego commita w którym bug występuje) dobrego (good - commita kodu w ktorym bug nie występuje). Można wykorzystać nie tylko do wyszukiwania bugów ale i do obserwowania kiedy następiła jakaś zmiana w kodzie.</br>
 				"Start" służy jako rozpoczecie sekwencji wyszukiwania zmiany. Pierwszym krokiem jest wskazanie commita mniej więcej w połowie pomiędzy good i bad i przywrocenie kodu do stanu z tego commita. Jeżeli to w nim znajduje się błąd to oznaczamy go jako bad z użyciem 'git bisect bad', a jeżeli nie wystepuje to oznaczamy jako 'git bisect good' i ponownie otrzymujemy commita w którym możemy mieć tego buga. Proces powtarzamy do znalezienia commita który wprowadza bug/zmiany. Reset to powrót do stanu z przed bisekcji, czyli powrót do oryginalnego head.
@@ -314,7 +315,7 @@ git -C blame - pozwala sprawdzic, kto jest autorem danej linii kodu, 'obwinic tw
         </section>
 		
 		<section class="command">
-            <h2 class="command__title">gitk -all</h2>
+            <h2 class="command__title">Komenda: gitk -all</h2>
             <p class="command__description">
                 Opis: gitk – Przeglądarka repozytorium na gicie. gitk -all – Wyświetla wszystkie branche, tagi, etc.  
 				Przydatne gdy chcemy wyswietlic całą zawartość naszego repozytorium.
@@ -323,7 +324,7 @@ git -C blame - pozwala sprawdzic, kto jest autorem danej linii kodu, 'obwinic tw
         </section>
 		
 		<section class="command">
-            <h2 class="command__title">git merge upstream/master</h2>
+            <h2 class="command__title">Komenda: git merge upstream/master</h2>
             <p class="command__description">
                 Opis: Polecenie zacznie od próby aktualizowania, jeśli jakieś zmiany zostały przeprowadzone. W przeciwnym wypadku wyświetlony zostanie komunikat, że wszystie pliki są "Up-to-date".
 			</p>
