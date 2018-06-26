@@ -1,4 +1,11 @@
 <!DOCTYPE html>
+
+<html>
+<head>
+	<meta charset="utf-8">
+</head>
+<body>
+
 <html lang="en">
  
 <head>
@@ -160,7 +167,16 @@ Początek :)
     Opcja <b>git config --global</b> służy do czytania lub edytowania konfiguracji z pliku ~/.gitconfig lub ~/.config/git/config, który zawiera konfigurację specyficzną dla danego użytkownika.</br>
     Opcja <b>git config --local</b> czyta lub edytuje konfigurację z pliku .git/config, należącego do aktualnego repozytorium, określającego ustawienia specyficzne tylko dla niego. Jest to domyślny poziom konfiguracji, w przypadku braku określenia odpowiedniej opcji w poleceniu <b>git config</b>.</br>
     Ustawienia każdego z poziomów nadpisują te, które są określone na niższym poziomie, zgodnie z kolejnością: system, global, local, gdzie global nadpisuje system, a local wszytkie pozostałe.
+    Polecenie to ustawia nam nazwę użytkownika. W cudzysłowia wstawiamy nazwę użytkownika, pozostawiając je pustę resetujemy nazwę użytkownika.</p>
   </p>
+
+	<p>git branch --merged</p>
+	
+	<p>Polecenie to służy do sprawdzenia jakie gałęzie zostały połączone z naszą obecną gałęzią</p>
+
+	<p>git pull "remote" "branch"</p>
+	
+	<p>polecenie to merge-uje do naszej gałęzi remote gałąź z serwera o nazwie branch<p>
 
   <p><b>git commit -a -m ""</b></br>
 
@@ -314,8 +330,10 @@ git -C blame - pozwala sprawdzic, kto jest autorem danej linii kodu, 'obwinic tw
             <h2 class="command__title">Komenda: gitk -all</h2>
             <p class="command__description">
                 Opis: gitk – Przeglądarka repozytorium na gicie. gitk -all – Wyświetla wszystkie branche, tagi, etc.  
-				Przydatne gdy chcemy wyswietlic całą zawartość naszego repozytorium.
+				Przydatne gdy chcemy wyswietlic całą zawartość naszego repozytorium oraz jego historię.
 			</p>
+      
+
             <p class="command__example">Przykład użycia: gitk -all</p>
         </section>
 		
@@ -328,5 +346,6 @@ git -C blame - pozwala sprawdzic, kto jest autorem danej linii kodu, 'obwinic tw
         </section>
 	</main>
 </center>
+
 </body>
 </html>
