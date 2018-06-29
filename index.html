@@ -342,11 +342,19 @@ git -C blame - pozwala sprawdzic, kto jest autorem danej linii kodu, 'obwinic tw
       gitk -all
     </dt>
     <dd>
-     gitk – Przeglądarka repozytorium na gicie. gitk -all – Wyświetla wszystkie branche, tagi, etc.  
-	 Przydatne gdy chcemy wyswietlic całą zawartość naszego repozytorium.
+     Sama komenda gitk ma na celu wyświetlenie zmian w repozytorium lub wyznaczonych commitów. Wizualizuje graf commitów z informacjami związanymi z każdym commitem. Opcja -all pokauzuje nam w pełni nasze repozytorium, czyli wszystkie branche, tagi etc.
 	 
 
     </dd>
+      git branch --merged
+    </dt>
+    <dd>
+     Pokazuje branche zmergowane w branchu w którym aktualnie się znajdujemy. Odwrotną do tego opcją jest --no-merged, która pokazuje jakich branchów jeszcze nie zmergowaliśmy. Domyślnie ta komenda pokazuje tylko lokalne branche. Aby pokazywała i lokalne i zdalne, potrzeba użyć opcji -a.
+	 
+
+    </dd>
+	
+	
     <dt>
 	git merge upstream/master
     </dt>
